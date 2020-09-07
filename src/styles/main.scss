@@ -20,6 +20,7 @@ html {
     border: solid 1px black;
     margin: 0 $boxGap $boxGap 0;
     @include flex-center;
+    transition: translateY 500ms , background-color 500ms;
     &:hover {
       transform: translateY(-20px);
       background-color: pink;
