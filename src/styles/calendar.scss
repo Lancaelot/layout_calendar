@@ -1,0 +1,24 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: $calendar-width;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  div {
+    height: $calendarElementSize;
+    width: $calendarElementSize;
+    background-color: #eee;
+    border: solid 1px black;
+    margin: 0 $calendarElementGap $calendarElementGap 0;
+
+    @include flex-center;
+    transition: translatey 500ms , background-color 500ms;
+    
+    &:hover {
+      transform: translateY(-20px);
+      background-color: pink;
+      cursor: pointer;
+    }
+  }
+}

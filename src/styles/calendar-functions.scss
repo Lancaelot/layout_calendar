@@ -1,0 +1,20 @@
+
+@for $i from 1 through 31 {
+  .calendar > div:nth-child(#{$i})::before {
+    content: "#{$i}";
+  }
+}
+
+@each $dayOfWeek , $dayOfWeekNumber in $week {
+  .calendar-#{$dayOfWeek} > div:first-child {
+    margin-left: ($calendarElementSize+$calendarElementGap)*$dayOfWeekNumber;
+  }
+}
+
+@for $i from 28 through 30 {
+  .calendar-#{$i} {
+    div:nth-child(n + #{$i+1}) {
+      display: none;
+    }
+  }
+}
