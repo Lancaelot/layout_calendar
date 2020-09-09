@@ -8,16 +8,16 @@
   div {
     height: $calendarElementSize;
     width: $calendarElementSize;
-    background-color: #eee;
+    background-color: $calendarElementColor;
     border: solid 1px black;
     margin: 0 $calendarElementGap $calendarElementGap 0;
 
     @include flex-center;
-    transition: translatey 500ms , background-color 500ms;
+    transition: transform 500ms , background-color 500ms;
     
     &:hover {
       transform: translateY(-20px);
-      background-color: pink;
+      background-color: $calendarElementHoveredColor;
       cursor: pointer;
     }
   }
